@@ -1,29 +1,243 @@
+```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>DuaMate</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DuaMate</title>
+
+<meta name="description"
+content="DuaMate - Privacy-first Islamic Dua application designed to help Muslims remember and recite authentic Duas anytime, anywhere.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --primary:#0f5c46;
+    --primary-light:#eef7f3;
+    --bg:#f7f9f8;
+    --text:#1f2937;
+    --muted:#64748b;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:
+        max(20px, env(safe-area-inset-top))
+        20px
+        max(20px, env(safe-area-inset-bottom));
+}
+
+.container{
+    width:100%;
+    max-width:900px;
+}
+
+.main-card{
+
+    background:#ffffff;
+
+    border:1px solid rgba(15,92,70,.06);
+
+    border-radius:32px;
+
+    padding:clamp(40px,6vw,70px);
+
+    text-align:center;
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,.05);
+}
+
+.logo{
+
+    width:90px;
+    height:90px;
+
+    border-radius:22px;
+
+    object-fit:cover;
+
+    margin-bottom:20px;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.12);
+}
+
+.brand{
+
+    color:var(--primary);
+
+    font-size:clamp(2rem,4vw,3.2rem);
+
+    font-weight:800;
+
+    margin-bottom:12px;
+}
+
+.tagline{
+
+    color:#475569;
+
+    font-size:clamp(1rem,2vw,1.2rem);
+
+    max-width:650px;
+
+    margin:0 auto 40px;
+}
+
+.links{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+    margin-top:20px;
+}
+
+.link-card{
+
+    background:#ffffff;
+
+    border:1px solid rgba(15,92,70,.05);
+
+    border-radius:22px;
+
+    padding:28px;
+
+    text-decoration:none;
+
+    transition:.25s ease;
+
+    color:inherit;
+}
+
+.link-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(15,92,70,.08);
+}
+
+.link-card h3{
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+}
+
+.link-card p{
+
+    color:#64748b;
+
+    font-size:.95rem;
+}
+
+.footer{
+
+    margin-top:40px;
+
+    color:#64748b;
+
+    font-size:.9rem;
+}
+
+@media(max-width:600px){
+
+    .main-card{
+        border-radius:24px;
+    }
+
+    .links{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
+
 </head>
-<body style="font-family:Arial;max-width:800px;margin:auto;padding:40px;">
-    <h1>DuaMate</h1>
 
-    <p>
-        Privacy-first Islamic Dua application.
-    </p>
+<body>
 
-    <h2>Useful Links</h2>
+<div class="container">
 
-    <ul>
-        <li>
-            <a href="privacy-policy.html">
-                Privacy Policy
-            </a>
-        </li>
+<div class="main-card">
 
-        <li>
-            <a href="terms.html">
-                Terms & Conditions
-            </a>
-        </li>
-    </ul>
+<img
+src="logo.png"
+alt="DuaMate Logo"
+class="logo">
+
+<h1 class="brand">
+DuaMate
+</h1>
+
+<p class="tagline">
+Privacy-first Islamic Dua application designed to help Muslims access authentic Duas, track daily remembrance, and strengthen their spiritual journey.
+</p>
+
+<div class="links">
+
+<a href="privacy-policy.html" class="link-card">
+
+<h3>
+🔒 Privacy Policy
+</h3>
+
+<p>
+Learn how DuaMate protects your privacy and keeps your information secure.
+</p>
+
+</a>
+
+<a href="terms.html" class="link-card">
+
+<h3>
+📜 Terms & Conditions
+</h3>
+
+<p>
+Read the terms governing the use of the DuaMate application.
+</p>
+
+</a>
+
+</div>
+
+<div class="footer">
+
+Made in India <br>
+DuaMate © 2026 All Rights Reserved
+
+</div>
+
+</div>
+
+</div>
+
 </body>
 </html>
+```
