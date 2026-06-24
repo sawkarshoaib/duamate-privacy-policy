@@ -1,55 +1,446 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>DuaMate Privacy Policy</title>
+
+<meta name="description"
+content="DuaMate Privacy Policy - Learn how DuaMate protects your privacy and keeps your data secure.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --primary:#0f5c46;
+    --primary-light:#eef7f3;
+    --bg:#f7f9f8;
+    --text:#1f2937;
+    --muted:#64748b;
+    --card:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+
+    min-height:100vh;
+
+    padding:
+        max(20px, env(safe-area-inset-top))
+        20px
+        max(20px, env(safe-area-inset-bottom));
+
+    line-height:1.75;
+}
+
+.container{
+
+    width:100%;
+    max-width:960px;
+
+    margin:auto;
+}
+
+.main-card{
+
+    background:#ffffff;
+    border:1px solid rgba(15,92,70,.06);
+
+    border-radius:32px;
+
+    padding:clamp(30px,5vw,60px);
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,0.05);
+
+    backdrop-filter:blur(10px);
+}
+
+.header{
+
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.logo-row{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:16px;
+
+    margin-bottom:25px;
+}
+
+.logo{
+
+    width:clamp(58px,8vw,76px);
+    height:clamp(58px,8vw,76px);
+
+    border-radius:18px;
+
+    object-fit:cover;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,0.12);
+}
+
+.brand{
+
+    color:var(--primary);
+
+    font-size:clamp(1.8rem,3vw,3rem);
+
+    font-weight:700;
+}
+
+.title{
+
+    font-size:clamp(2.4rem,5vw,4.4rem);
+
+    font-weight:800;
+
+    letter-spacing:-1px;
+
+    color:#0f172a;
+
+    margin-bottom:15px;
+}
+
+.updated{
+
+    color:var(--muted);
+
+    font-size:1rem;
+
+    margin-bottom:25px;
+}
+
+.subtitle{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#475569;
+
+    font-size:clamp(1rem,2vw,1.2rem);
+}
+
+.policy-list{
+
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+}
+
+.policy-item{
+
+    display:flex;
+    align-items:flex-start;
+
+    gap:25px;
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:28px;
+
+    border:1px solid rgba(15,92,70,.04);
+
+    box-shadow:
+    0 4px 20px rgba(0,0,0,0.04);
+
+    transition:all .25s ease;
+}
+
+.policy-item:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 12px 30px rgba(15,92,70,.08);
+}
+
+.icon-box{
+
+    width:90px;
+    height:90px;
+
+    min-width:90px;
+
+    border-radius:50%;
+
+    background:var(--primary-light);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:38px;
+}
+
+.content h3{
+
+    color:var(--primary);
+
+    font-size:clamp(1.2rem,2vw,1.6rem);
+
+    margin-bottom:10px;
+}
+
+.content p{
+
+    color:#334155;
+}
+
+.contact{
+
+    color:var(--primary);
+
+    font-weight:700;
+    text-decoration:none;
+}
+
+.contact:hover{
+    text-decoration:underline;
+}
+
+.footer-card{
+
+    margin-top:30px;
+
+    background:linear-gradient(
+        135deg,
+        #f4faf7,
+        #eef7f3
+    );
+
+    border-radius:22px;
+
+    padding:25px;
+
+    text-align:center;
+}
+
+.footer-card h4{
+
+    color:var(--primary);
+
+    margin-bottom:8px;
+}
+
+.footer-card p{
+
+    color:#334155;
+}
+
+.copyright{
+
+    text-align:center;
+
+    margin-top:35px;
+
+    color:var(--muted);
+
+    font-size:.95rem;
+}
+
+/* Tablet */
+
+@media(max-width:768px){
+
+    .policy-item{
+
+        flex-direction:column;
+        gap:18px;
+    }
+
+    .icon-box{
+
+        width:72px;
+        height:72px;
+        min-width:72px;
+
+        font-size:30px;
+    }
+}
+
+/* Small Phones */
+
+@media(max-width:480px){
+
+    .main-card{
+        border-radius:24px;
+    }
+
+    .policy-item{
+
+        padding:20px;
+    }
+
+    .icon-box{
+
+        width:60px;
+        height:60px;
+        min-width:60px;
+
+        font-size:26px;
+    }
+
+    .copyright{
+
+        font-size:.85rem;
+    }
+}
+
+</style>
+
 </head>
 
-<body style="font-family:Arial;max-width:900px;margin:auto;padding:40px;">
+<body>
 
-<h1>Privacy Policy</h1>
+<div class="container">
 
-<p>Last Updated: June 2026</p>
+<div class="main-card">
 
-<p>
-DuaMate is designed to help users access authentic Islamic Duas in Arabic, English, and Hindi while maintaining a privacy-first experience.
+<div class="header">
+
+<div class="logo-row">
+
+<img
+src="DuaMate_AppIcon.jpeg"
+alt="DuaMate Logo"
+class="logo">
+
+<div class="brand">
+DuaMate
+</div>
+
+</div>
+
+<h1 class="title">
+Privacy Policy
+</h1>
+
+<div class="updated">
+📅 Last Updated: June 2026
+</div>
+
+<p class="subtitle">
+Your privacy matters. DuaMate is designed to provide authentic Islamic Duas while respecting your privacy and keeping your data secure.
 </p>
 
-<h2>Information We Collect</h2>
+</div>
+
+<div class="policy-list">
+
+<div class="policy-item">
+<div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0f5c46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V6l8-3 8 3z"/><path d="m9 12 2 2 4-4"/></svg></div>
+<div class="content">
+<h3>1. Data Collection</h3>
+<p>
+DuaMate does not collect, store, or share any personal information. No registration, account creation, or login is required to use the app.
+</p>
+</div>
+</div>
+
+<div class="policy-item">
+<div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0f5c46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+<div class="content">
+<h3>2. Local Storage</h3>
+<p>
+Favorites, settings, notes, and reminders are stored locally on your device and never transmitted to external servers.
+</p>
+</div>
+</div>
+
+<div class="policy-item">
+<div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0f5c46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg></div>
+<div class="content">
+<h3>3. Audio Features</h3>
+<p>
+Audio recitation and text-to-speech functionality operate directly on your device. No audio data is collected or uploaded.
+</p>
+</div>
+</div>
+
+<div class="policy-item">
+<div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0f5c46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a2 2 0 0 0 3.4 0"/></svg></div>
+<div class="content">
+<h3>4. Notifications</h3>
+<p>
+Reminder notifications are generated locally on your device and are not managed through remote servers.
+</p>
+</div>
+</div>
+
+<div class="policy-item">
+<div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0f5c46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+<div class="content">
+<h3>5. Data Security</h3>
+<p>
+Since we do not collect personal data, there is no personal information at risk. All information remains on your device.
+</p>
+</div>
+</div>
+
+<div class="policy-item">
+<div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0f5c46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg></div>
+<div class="content">
+<h3>6. Contact Us</h3>
+<p>
+If you have questions regarding this Privacy Policy, please contact us at:
+<br><br>
+<span class="contact">
+duamate.support@gmail.com
+</span>
+</p>
+</div>
+</div>
+
+</div>
+
+<div class="footer-card">
+
+<h4>
+❤️ Thank you for trusting DuaMate
+</h4>
 
 <p>
-DuaMate does not collect, store, transmit, or share personal information.
+Remember us in your Duas.
 </p>
 
-<ul>
-<li>No account registration</li>
-<li>No email collection</li>
-<li>No phone number collection</li>
-<li>No location tracking</li>
-</ul>
+</div>
 
-<h2>Offline Usage</h2>
+<div class="copyright">
+Made in India 🇮🇳 &nbsp; | &nbsp;
+DuaMate © 2026 All Rights Reserved
+</div>
 
-<p>
-Your saved preferences and favorites remain on your device.
-</p>
+</div>
 
-<h2>Data Sharing</h2>
-
-<p>
-We do not sell, share, or transfer user data.
-</p>
-
-<h2>Third Party Services</h2>
-
-<p>
-DuaMate does not use advertising networks or tracking services.
-</p>
-
-<h2>Contact</h2>
-
-<p>
-Email: shoaibsawkarcodes@gmail.com
-</p>
+</div>
 
 </body>
 </html>
